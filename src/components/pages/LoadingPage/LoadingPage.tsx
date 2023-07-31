@@ -3,6 +3,7 @@ import React from "react";
 
 import BackgroundImg from "../../../../assets/svg/loading_background.svg";
 import LOGO from "../.../../../../../assets/svg/logo_1.svg";
+import TextLogo from "../../../baseui/TextLogo/TextLogo";
 
 const LoadingPage = () => {
   return (
@@ -13,6 +14,9 @@ const LoadingPage = () => {
       <View style={styles.contentViewStyle}>
         <LOGO width="70" height="70" />
         <Text style={styles.titleStyle}>Whatsapp</Text>
+      </View>
+      <View style={styles.textLogoViewStyle}>
+        <TextLogo />
       </View>
     </View>
   );
@@ -42,6 +46,11 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     marginTop: 12,
     // fontFamily: "Roboto",
+  },
+  textLogoViewStyle: {
+    position: "absolute",
+    bottom: 100,
+    left: "38%",
   },
 });
 
