@@ -3,7 +3,7 @@ import React from "react";
 import WelcomeArt from "../../../../assets/svg/welcome_page_art.svg";
 import TextLogo from "../../../baseui/TextLogo/TextLogo";
 
-const WelcomePage = () => {
+const WelcomePage = ({ navigation }: { navigation: any }) => {
   return (
     <View style={styles.root}>
       <View style={styles.contentStyle}>
@@ -19,7 +19,12 @@ const WelcomePage = () => {
             Teams of Service.
           </Text>
         </Text>
-        <Pressable onPress={() => {}} style={styles.buttonStyle}>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("login_page");
+          }}
+          style={styles.buttonStyle}
+        >
           <Text style={styles.buttonTextStyle}>AGREE AND CONTINUE</Text>
         </Pressable>
       </View>
