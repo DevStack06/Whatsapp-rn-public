@@ -6,13 +6,14 @@ import LoadingPage from "./src/components/pages/LoadingPage/LoadingPage";
 import WelcomePage from "./src/components/pages/WelcomePage/WelcomePage";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginPage from "./src/components/pages/LoginPage/LoginPage";
+import CountryPage from "./src/components/pages/LoginPage/CountryPage";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="loading_page">
+      <Stack.Navigator initialRouteName="country_page">
         <Stack.Screen
           name="loading_page"
           component={LoadingPage}
@@ -33,6 +34,13 @@ export default function App() {
           // options={{
           //   headerShown: false,
           // }}
+        />
+        <Stack.Screen
+          name="country_page"
+          component={CountryPage}
+          options={{
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
