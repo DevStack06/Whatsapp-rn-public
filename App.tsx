@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="welcome_page">
+      <Stack.Navigator initialRouteName="loading_page">
         <Stack.Screen
           name="loading_page"
           component={LoadingPage}

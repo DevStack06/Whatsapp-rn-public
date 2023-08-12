@@ -58,7 +58,9 @@ const styles = StyleSheet.create({
   titleStyle: {
     color: "#000",
     fontSize: 28,
-    fontWeight: "500",
+    fontWeight: "700",
+    fontFamily: "Roboto-Bold",
+    letterSpacing: 0.3,
   },
   descStyle: {
     color: "#000",
