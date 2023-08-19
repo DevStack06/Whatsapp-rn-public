@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import { Appbar } from "react-native-paper";
 
 const OtpPage = () => {
-  const [code, setCode] = useState("8990");
-  console.log("are we ", code);
-
   return (
     <View style={styles.root}>
       <Appbar.Header
