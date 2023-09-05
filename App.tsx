@@ -15,7 +15,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="login_page">
+      <Stack.Navigator initialRouteName="loading_page">
         <Stack.Screen
           name="loading_page"
           component={LoadingPage}
@@ -33,9 +33,9 @@ export default function App() {
         <Stack.Screen
           name="login_page"
           component={LoginPage}
-          // options={{
-          //   headerShown: false,
-          // }}
+          options={{
+            headerShown: false,
+          }}
         />
         <Stack.Screen
           name="country_page"

@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Appbar } from "react-native-paper";
 import OTPTextInput from "react-native-otp-textinput";
 
-const OtpPage = () => {
+const OtpPage = ({ navigation }: { navigation: any }) => {
   let otpInput = useRef(null);
   return (
     <View style={styles.root}>
@@ -28,7 +28,12 @@ const OtpPage = () => {
             <Text style={styles.secondTextStyle}> 56 </Text>s
           </Text>
         </View>
-        <Pressable onPress={() => {}} style={styles.buttonStyle}>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("home_page");
+          }}
+          style={styles.buttonStyle}
+        >
           <Text style={styles.buttonTextStyle}>Verify</Text>
         </Pressable>
       </View>

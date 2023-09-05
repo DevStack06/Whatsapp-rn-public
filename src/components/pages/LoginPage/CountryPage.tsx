@@ -4,7 +4,7 @@ import { Appbar } from "react-native-paper";
 import countryData from "../../../data/country.json";
 import CountryPageItem from "./CountryPageItem";
 
-const CountryPage = () => {
+const CountryPage = ({ navigation }: { navigation: any }) => {
   return (
     <View>
       <Appbar.Header
@@ -13,7 +13,11 @@ const CountryPage = () => {
           elevation: 9,
         }}
       >
-        <Appbar.BackAction onPress={() => {}} />
+        <Appbar.BackAction
+          onPress={() => {
+            navigation.goBack();
+          }}
+        />
         <Appbar.Content title="Select your country" />
         <Appbar.Action icon="magnify" onPress={() => {}} />
       </Appbar.Header>
