@@ -1,8 +1,10 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Appbar } from "react-native-paper";
+import OTPTextInput from "react-native-otp-textinput";
 
 const OtpPage = () => {
+  let otpInput = useRef(null);
   return (
     <View style={styles.root}>
       <Appbar.Header
@@ -16,7 +18,11 @@ const OtpPage = () => {
       </Appbar.Header>
       <View style={styles.mainStyle}>
         <View style={styles.contentStyle}>
-          <Text>Code has been send to +91 11******44</Text>
+          <Text>Code has been send to +91 8765432098</Text>
+          <OTPTextInput
+            ref={(e: any) => (otpInput = e)}
+            textInputStyle={styles.textInputStyle}
+          />
           <Text>
             Resend Code in
             <Text style={styles.secondTextStyle}> 56 </Text>s
@@ -44,6 +50,9 @@ const styles = StyleSheet.create({
   },
   contentStyle: {
     flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 30,
   },
   secondTextStyle: {
     color: "#00A884",
@@ -62,5 +71,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 14,
     fontWeight: "400",
+  },
+  textInputStyle: {
+    borderRadius: 10,
+    borderWidth: 2,
   },
 });

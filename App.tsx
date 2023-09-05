@@ -8,13 +8,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginPage from "./src/components/pages/LoginPage/LoginPage";
 import CountryPage from "./src/components/pages/LoginPage/CountryPage";
 import OtpPage from "./src/components/pages/LoginPage/OtpPage";
+import HomePage from "./src/components/pages/HomePage/HomePage";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="otp_page">
+      <Stack.Navigator initialRouteName="login_page">
         <Stack.Screen
           name="loading_page"
           component={LoadingPage}
@@ -46,6 +47,13 @@ export default function App() {
         <Stack.Screen
           name="otp_page"
           component={OtpPage}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="home_page"
+          component={HomePage}
           options={{
             headerShown: false,
           }}
