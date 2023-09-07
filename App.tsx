@@ -9,6 +9,7 @@ import LoginPage from "./src/components/pages/LoginPage/LoginPage";
 import CountryPage from "./src/components/pages/LoginPage/CountryPage";
 import OtpPage from "./src/components/pages/LoginPage/OtpPage";
 import HomePage from "./src/components/pages/HomePage/HomePage";
+import Example from "./src/components/pages/HomePage/Example";
 
 const Stack = createNativeStackNavigator();
 
@@ -53,7 +54,7 @@ export default function App() {
         />
         <Stack.Screen
           name="home_page"
-          component={HomePage}
+          component={Example}
           options={{
             headerShown: false,
           }}
